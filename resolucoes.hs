@@ -161,6 +161,6 @@ busca_elem :: Int -> [Int] -> (Bool, Int)
 busca_elem n1 xs =if existe then (True ,vai) else (False,qts)
   where
      existe= (sum[1| x<-xs, x==n1])>0
-     qts=sum[1| x<-xs]+1
+     qts=sum[1| x<-xs]
      vai= pega_pos 1 n1 xs
       
