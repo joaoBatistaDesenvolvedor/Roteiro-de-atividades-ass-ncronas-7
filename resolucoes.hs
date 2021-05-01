@@ -164,3 +164,15 @@ busca_elem n1 xs =if existe then (True ,vai) else (False,qts)
      qts=sum[1| x<-xs]
      vai= pega_pos 1 n1 xs
       
+
+{-
+exercicio 11 sem usar rec para pega a posicao do numero
+
+-}
+busca_elem_rec :: Int -> [Int] -> (Bool, Int)
+busca_elem_rec n1 xs =if existe then (True ,vai) else (False,qts)
+  where
+     existe= (sum[1| x<-xs, x==n1])>0
+     qts=sum[1| x<-xs]
+     vai= sum([1|x<-takeWhile (/=n1) xs])+1
+
